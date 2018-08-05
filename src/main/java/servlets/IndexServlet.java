@@ -1,5 +1,8 @@
 package servlets;
 
+import controllers.LogInController;
+import enitity.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,16 +14,24 @@ import java.io.IOException;
 public class IndexServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        super.doPost(request, response);
+        String name = req.getParameter("name");
+        String password = req.getParameter("pass");
+        User user = new User(name, password);
+        String warningMessage = LogInController.verifyLogIn(user) ? "Log In Completed" : "Log In Fail";
+        System.out.println(warningMessage);
+        req.setAttribute("userName", name);
+        req.setAttribute("warningMessage", warningMessage);
+
+        doGet(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
-        String message = "Worked 777";
+        String message = "From servlet";
         request.setAttribute("message", message);
         request.getRequestDispatcher("WEB-INF/layout/indexJSP.jsp").forward(request, response);
     }

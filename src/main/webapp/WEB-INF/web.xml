@@ -9,10 +9,19 @@
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>servlets.IndexServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReportServlet</servlet-name>
+        <servlet-class>servlets.ReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportServlet</servlet-name>
+        <url-pattern>/reportservlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

@@ -96,7 +96,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>servlets/IndexServlet</mainClass>
+                            <mainClass>ru/strava/App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -21,6 +21,7 @@
         </c:if>
         <c:out value="${message}" default="default 2"/>
         <li><a href="/reportservlet">REPORT jsp5</a></li>
+        <li><a href="/reportservlet">REPORT jsp77</a></li>
 
         <form method="post">
         <label>Name:

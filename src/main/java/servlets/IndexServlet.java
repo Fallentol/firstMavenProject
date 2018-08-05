@@ -31,6 +31,7 @@ public class IndexServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         String message = "From servlet";
+        String message3 = "From servlet";
         request.setAttribute("message", message);
         request.getRequestDispatcher("WEB-INF/layout/indexJSP.jsp").forward(request, response);
     }

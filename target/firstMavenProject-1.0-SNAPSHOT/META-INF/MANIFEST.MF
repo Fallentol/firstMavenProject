@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
 Built-By: Oracle
+Class-Path: javassist-3.13.0-GA.jar servlet-api-3.0-alpha-1.jar javaee
+ -api-5.jar javaee-web-api-6.0.jar jstl-1.2.jar mysql-connector-java-5
+ .1.39.jar json-20140107.jar
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_91
+Main-Class: IndexServlet
 

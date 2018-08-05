@@ -9,7 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-
     <name>First project</name>
     <description>После длительного перерыва учимся сначала</description>
     <url>http://www.strava.org</url>
@@ -90,6 +89,18 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>servlets/IndexServlet</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
 
         <resources>
@@ -104,6 +115,8 @@
         </resources>
 
     </build>
+
+
 
 
 </project>

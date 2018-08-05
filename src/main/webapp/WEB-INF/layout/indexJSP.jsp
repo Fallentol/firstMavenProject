@@ -22,6 +22,8 @@
         <c:out value="${message}" default="default 2"/>
         <li><a href="/reportservlet">REPORT jsp5</a></li>
         <li><a href="/reportservlet">REPORT jsp77</a></li>
+        <li><a href="/reportservlet">REPORT jsp777777</a></li>
+        <li><a href="/reportservlet">REPORT jsp7777</a></li>
 
         <form method="post">
         <label>Name:

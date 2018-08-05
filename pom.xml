@@ -7,7 +7,7 @@
     <groupId>ru.strava</groupId>
     <artifactId>firstMavenProject</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
 
     <name>First project</name>

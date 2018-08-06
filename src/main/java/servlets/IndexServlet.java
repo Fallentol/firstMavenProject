@@ -23,6 +23,7 @@ public class IndexServlet extends HttpServlet {
         String warningMessage = LogInController.verifyLogIn(user) ? "Log In Completed" : "Log In Fail";
         System.out.println(warningMessage);
         req.setAttribute("userName", name);
+        req.setAttribute("userName2", name);
         req.setAttribute("warningMessage", warningMessage);
 
         doGet(req, resp);

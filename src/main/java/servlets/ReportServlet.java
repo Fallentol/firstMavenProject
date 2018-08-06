@@ -12,6 +12,7 @@ public class ReportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         super.doPost(request, response);
+        System.out.println("ReportServlet");
     }
 
     @Override

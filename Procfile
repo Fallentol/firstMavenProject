@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=30122 -jar target/firstMavenProject-1.0-SNAPSHOT.jar
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar target/firstMavenProject-1.0-SNAPSHOT.jar

@@ -14,6 +14,7 @@ public class ReportServlet extends HttpServlet {
         super.doPost(request, response);
         System.out.println("ReportServlet");
         System.out.println("ReportServlet3242");
+        System.out.println("ReportServlet3242");
     }
 
     @Override

@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>First project</name>
-    <description>После длительного перерыва учимся сначала</description>
+    <description>Description</description>
 
     <dependencies>
         <dependency>

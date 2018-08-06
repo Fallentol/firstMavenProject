@@ -12,6 +12,10 @@ import java.io.IOException;
 
 public class IndexServlet extends HttpServlet {
 
+    public static void main(String[] x) {
+        System.out.println("MAIN METHOD!");
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

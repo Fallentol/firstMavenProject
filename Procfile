@@ -1,1 +1,1 @@
-web: java -jar target/firstMavenProject-1.0-SNAPSHOT.jar
+web: java $JAVA_OPTS -Dserver.port=30122 -jar target/firstMavenProject-1.0-SNAPSHOT.jar

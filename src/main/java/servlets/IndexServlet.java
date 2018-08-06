@@ -15,13 +15,14 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        String test = "Only post";
+        System.out.println(test);
         String name = req.getParameter("name");
         String password = req.getParameter("pass");
         User user = new User(name, password);
         String warningMessage = LogInController.verifyLogIn(user) ? "Log In Completed" : "Log In Fail";
         System.out.println(warningMessage);
         req.setAttribute("userName", name);
-        req.setAttribute("voidValue", "AnyVal");
         req.setAttribute("warningMessage", warningMessage);
 
         doGet(req, resp);

@@ -5,5 +5,5 @@ Class-Path: javassist-3.13.0-GA.jar servlet-api-3.0-alpha-1.jar javaee
  .1.39.jar json-20140107.jar
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_91
-Main-Class: ru/strava/App
+Main-Class: servlets/InitServlet
 

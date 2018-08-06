@@ -11,7 +11,6 @@
 
     <name>First project</name>
     <description>После длительного перерыва учимся сначала</description>
-    <url>http://www.strava.org</url>
 
     <dependencies>
         <dependency>
@@ -61,12 +60,7 @@
             <artifactId>json</artifactId>
             <version>20140107</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>salesforce-lightning-design-system</artifactId>
-            <version>2.5.2</version>
-            <scope>provided</scope>
-        </dependency>-->
+
 
     </dependencies>
 
@@ -96,10 +90,15 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ru/strava/App</mainClass>
+                            <mainClass>servlets/InitServlet</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>2.0.3</version>
             </plugin>
 
             <!--<plugin>

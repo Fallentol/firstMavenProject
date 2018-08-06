@@ -21,6 +21,7 @@ public class IndexServlet extends HttpServlet {
         String warningMessage = LogInController.verifyLogIn(user) ? "Log In Completed" : "Log In Fail";
         System.out.println(warningMessage);
         req.setAttribute("userName", name);
+        req.setAttribute("voidValue", "AnyVal");
         req.setAttribute("warningMessage", warningMessage);
 
         doGet(req, resp);
@@ -29,9 +30,12 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("Get servlet");
+        int ytv = 5;
         response.setContentType("text/html");
         String message = "From servlet";
         request.setAttribute("message", message);
+        request.setAttribute("git", ytv);
         request.getRequestDispatcher("WEB-INF/layout/indexJSP.jsp").forward(request, response);
     }
 

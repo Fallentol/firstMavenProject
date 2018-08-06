@@ -3,10 +3,12 @@ package ru.strava;
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello world  Last test");
-        System.out.println("Hello world  Last test");
-        System.out.println("Hello world  Last test");
+        System.out.println("Hello world  Last test 2 ");
+        System.out.println("Hello world  Last test 3 ");
         Integer in = 5;
     }
+
+
 
     public static int th = 9;
 }

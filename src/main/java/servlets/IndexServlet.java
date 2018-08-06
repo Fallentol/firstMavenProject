@@ -14,6 +14,7 @@ public class IndexServlet extends HttpServlet {
 
     public static void main(String[] x) {
         System.out.println("MAIN METHOD!");
+        System.out.println("WORKED!");
     }
 
     @Override

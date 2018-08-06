@@ -90,7 +90,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>servlets/IndexServlet</mainClass>
+                            <mainClass>servlets.IndexServlet</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

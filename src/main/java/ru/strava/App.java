@@ -8,6 +8,8 @@ public class App {
         Integer in = 5;
     }
 
+    public static String PORT = System.getenv("PORT");
+
 
 
     public static int th = 9;

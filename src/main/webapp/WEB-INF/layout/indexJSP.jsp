@@ -20,6 +20,7 @@
             <p><c:out value = " ${warningMessage}"/><p>
         </c:if>
         <c:out value="${message}" default="default 2"/>
+        Counter : <c:out value="${counter}" default="default 2"/>
         <li><a href="/reportservlet">REPORT jsp5</a></li>
         <li><a href="/reportservlet">REPORT jsp77</a></li>
         <li><a href="/reportservlet">REPORT jsp777777</a></li>

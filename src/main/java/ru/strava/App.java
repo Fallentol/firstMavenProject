@@ -3,8 +3,6 @@ package ru.strava;
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello world  Last test");
-        System.out.println("Hello world  Last test 2 ");
-        System.out.println("Hello world  Last test 5 ");
         System.out.println("System PORT = " + PORT);
         Integer in = 5;
     }

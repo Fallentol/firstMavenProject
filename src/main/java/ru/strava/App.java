@@ -9,6 +9,8 @@ public class App {
     }
 
     public static String PORT = System.getenv("PORT");
+    /*String host = "0.0.0.0";
+    int port = System.getenv("PORT");*/
 
 
 

@@ -15,6 +15,7 @@ public class IndexServlet extends HttpServlet {
         System.out.println("ReportServlet");
         System.out.println("ReportServlet3242");
         System.out.println("ReportServlet3242");
+        System.out.println("ReportServlet324432");
     }
 
     @Override

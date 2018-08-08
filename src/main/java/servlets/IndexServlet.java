@@ -23,6 +23,7 @@ public class IndexServlet extends HttpServlet {
         response.setContentType("text/html");
         String message = "Report data";
         request.setAttribute("message", message);
+        request.setAttribute("adminName", "Serega");
         request.getRequestDispatcher("WEB-INF/layout/indexJSP.jsp").forward(request, response);
     }
 }

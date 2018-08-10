@@ -1,1 +1,2 @@
 https://vast-badlands-21955.herokuapp.com/index
+java -jar target/dependency/webapp-runner.jar target/*.war

@@ -3,15 +3,29 @@ body {
     background-color: coral;
 }
 .centralDiv {
-    width: 800px;
+    width: 100%;
     alignment: center;
-    border: 2px solid orange;
     height: 100%;
     margin: auto;
-    box-shadow: 2px 2px 6px;
-    background-color: gainsboro;
+    background-color: rgba(0,0,0,0.5);
 }
 .inputBar {
     width: 150px !important;
+}
+
+.slds-card {
+    opacity: 1;
+    margin: 0px 10px 10px 10px !important;
+}
+.slds-card__footer {
+    border-top-width: 1px;
+    border-top-color: rgb(221, 219, 218);
+    border-top-style: solid;
+}
+.txtlink {
+    color: #357280;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
 }
 

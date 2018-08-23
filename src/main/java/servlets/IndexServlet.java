@@ -1,22 +1,31 @@
 package servlets;
 
+import salesforce.SalesforceREST;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        super.doPost(request, response);
-        System.out.println("ReportServlet");
-        System.out.println("ReportServlet3242");
-        System.out.println("ReportServlet3242");
-        System.out.println("ReportServlet324432");
-        System.out.println("ReportServlet324432");
+        System.out.println("Index Servlet got a POST request");
+
+        SalesforceREST salesforceREST = new SalesforceREST();
+        String result = salesforceREST.testRequest();
+
+        String token = request.getParameter("token");
+        System.out.println("token is " + token);
+        PrintWriter pwList = response.getWriter();
+        pwList.write("Response - " + result);
+        request.setAttribute("some", "anyParam");
+
+
     }
 
     @Override

@@ -18,7 +18,7 @@ public class SalesforceREST {
         PARAMETERS_MAP.put("clientId", "3MVG9QDx8IX8nP5SHWOHzxzIlX061uHpPZTejQUoUHbochOxdKNhRYNbqm3PV4b8ntjL4_QJ2OSPwJWUNSRDK");
         PARAMETERS_MAP.put("clientSecret", "7229401104744862355");
         PARAMETERS_MAP.put("code", "00DU0000000JfPA!AQkAQI5HPX30XH24kVSE64epd6.7HxMzDb4AJqJPimCV6bAf_zv4rAaUB.Sw0LDcc36Tz7qpaDKEPoLBDRUE8Hwsu6.9IRnu");
-        PARAMETERS_MAP.put("redirectUri", "https://localhost:8080");
+        PARAMETERS_MAP.put("redirectUri", "https://cloudbudgetheroku.herokuapp.com/indexJSP");
         PARAMETERS_MAP.put("environment", "https://na48.salesforce.com/services/oauth2/token");
     }
 

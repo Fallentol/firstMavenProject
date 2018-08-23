@@ -25,7 +25,6 @@ public class IndexServlet extends HttpServlet {
         pwList.write("Response - " + result);
         request.setAttribute("some", "anyParam");
 
-
     }
 
     @Override

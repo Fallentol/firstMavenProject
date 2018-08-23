@@ -17,12 +17,17 @@ public class IndexServlet extends HttpServlet {
         System.out.println("Index Servlet got a POST request");
 
         SalesforceREST salesforceREST = new SalesforceREST();
-        String result = salesforceREST.testRequest();
 
+        String result = "";
         String token = request.getParameter("token");
         System.out.println("token is " + token);
+        if (token.equals("first")) {
+            result = salesforceREST.getAutorizationCode(request);
+        } else {
+            result = salesforceREST.secondRequest(request);
+        }
         PrintWriter pwList = response.getWriter();
-        pwList.write("Response - " + result);
+        pwList.write(result);
         request.setAttribute("some", "anyParam");
 
     }

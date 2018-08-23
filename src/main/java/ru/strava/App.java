@@ -7,8 +7,7 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello world!!");
-        SalesforceREST salesforceREST = new SalesforceREST();
-        salesforceREST.testRequest();
+
     }
 
     public static String PORT = System.getenv("PORT");

@@ -1,6 +1,6 @@
 package servlets;
 
-import salesforce.SalesforceREST;
+import salesforce.SalesForceREST;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,15 +16,14 @@ public class IndexServlet extends HttpServlet {
             throws ServletException, IOException {
         System.out.println("Index Servlet got a POST request");
 
-        SalesforceREST salesforceREST = new SalesforceREST();
+        SalesForceREST salesforceREST = new SalesForceREST();
 
         String result = "";
         String action = request.getParameter("action");
-        System.out.println("token is " + action);
         if (action.equals("logIn")) {
-            result = salesforceREST.getAutorizationCode(request);
+            result = salesforceREST.getAuthorizationCode(request);
         } else {
-            result = salesforceREST.secondRequest(request);
+            result = salesforceREST.getQueryRequest(request);
         }
         PrintWriter pwList = response.getWriter();
         pwList.write(result);

@@ -43,14 +43,19 @@
                         </div>
                         <div class="slds-no-flex">
                             <input type="button" onclick="sendLogInRequest();"
-                                   class="slds-button slds-button--neutral" value="Login"/>
+                                   class="slds-button slds-button--neutral" value="Login 82th"/>
+                            <input type="button" onclick="sendLogInRequest();"
+                                   class="slds-button slds-button--neutral" value="Login BRI Sandbox"/>
                             <input type="button" onclick="deleteOldTable(); sendQueryRequest(); "
-                                   class="slds-button slds-button--neutral" value="Send Request"/>
+                                   class="slds-button slds-button--neutral" value="Submit"/>
                         </div>
                     </header>
                 </div>
                 <div class="slds-card__body slds-card__body_inner" style="padding-left: 15px;">
-                    Query (SELECT Name, Id FROM cb3__Line__c)<input type="text" id="req" class="slds-input"/>
+                    Query<br/>
+                    (SELECT Id, Name, cb3__Q1__c FROM cb3__Line__c WHERE cb3__Entry__c != null)<br/>
+                    (SELECT Name, cb3__Organization__r.Name FROM cb3__Entry__c)<br/>
+                    <input type="text" id="req" class="slds-input"/>
                     Answer<input type="text" id="answer" class="slds-input"/>
                     <div id="tablePlace"></div>
                     <a class="txtlink" href="/reportservlet">Report page</a>

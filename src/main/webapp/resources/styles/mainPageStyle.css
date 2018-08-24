@@ -28,4 +28,9 @@ body {
     margin-left: 20px;
     font-size: 16px;
 }
+.tableHeader{
+    font-weight: bold;
+    background-color: #505050;
+    color: cadetblue;
+}
 

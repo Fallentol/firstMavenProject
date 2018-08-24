@@ -1,7 +1,5 @@
 package ru.strava;
 
-import salesforce.SalesforceREST;
-
 import java.io.IOException;
 
 public class App {

@@ -19,9 +19,9 @@ public class IndexServlet extends HttpServlet {
         SalesforceREST salesforceREST = new SalesforceREST();
 
         String result = "";
-        String token = request.getParameter("token");
-        System.out.println("token is " + token);
-        if (token.equals("first")) {
+        String action = request.getParameter("action");
+        System.out.println("token is " + action);
+        if (action.equals("logIn")) {
             result = salesforceREST.getAutorizationCode(request);
         } else {
             result = salesforceREST.secondRequest(request);

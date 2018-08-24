@@ -7,17 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Redirect</title>
-</head>
-<body>
-
-
-<%
-    String redirectURL = "/indexJSP";
-    response.sendRedirect(redirectURL);
-%>
-
-
-</body>
+	<head>
+		<title>Redirect</title>
+	</head>
+	<body>
+		
+		
+		<%
+			String redirectURL = "/indexJSP";
+			response.sendRedirect(redirectURL);
+		%>
+	
+	
+	</body>
 </html>

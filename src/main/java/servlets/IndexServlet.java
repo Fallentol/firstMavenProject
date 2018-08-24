@@ -13,17 +13,19 @@ public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
         System.out.println("Index Servlet got a POST request");
 
         SalesForceREST salesforceREST = new SalesForceREST();
 
-        String result = "";
+        String result;
         String action = request.getParameter("action");
         if (action.equals("logIn")) {
             result = salesforceREST.getAuthorizationCode(request);
-        } else {
+        } else if (action.equals("queryRequest")) {
             result = salesforceREST.getQueryRequest(request);
+        } else {
+            result = salesforceREST.getAnonymousRequest(request);
         }
         PrintWriter pwList = response.getWriter();
         pwList.write(result);

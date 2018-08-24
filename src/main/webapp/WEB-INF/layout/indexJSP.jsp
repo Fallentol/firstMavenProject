@@ -24,13 +24,13 @@
                 <div class="slds-card__header slds-grid">
                     <header class="slds-media slds-media_center slds-has-flexi-truncate">
                         <div class="slds-media__figure">
-            <span class="slds-icon_container slds-icon-standard-account" title="account">
-        <span class="slds-assistive-text">Reports</span>
-        </span>
+                            <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                <span class="slds-assistive-text">Console Log</span>
+                            </span>
                         </div>
                         <div class="slds-media__body">
-                            <div style="display: inline-block">
-                                <img src="../resources/images/icon.png" alt="icon" style="width:auto;">
+                            <div style="display: inline-block; width: 36px; height: 36px;
+                                    background-image:url(../../resources/images/icon.jpg);">
                             </div>
                             <div style="display: inline-block">
                                 <h2 class="slds-card__header-title">
@@ -47,7 +47,9 @@
                             <input type="button" onclick="sendLogInRequest();"
                                    class="slds-button slds-button--neutral" value="Login BRI Sandbox"/>
                             <input type="button" onclick="deleteOldTable(); sendQueryRequest(); "
-                                   class="slds-button slds-button--neutral" value="Submit"/>
+                                   class="slds-button slds-button--neutral" value="Submit request"/>
+                            <input type="button" onclick="deleteOldTable(); sendAnonymousRequest(); "
+                                   class="slds-button slds-button--neutral" value="Submit Anonymous"/>
                         </div>
                     </header>
                 </div>

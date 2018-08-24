@@ -11,13 +11,9 @@
 		<title>Redirect</title>
 	</head>
 	<body>
-		
-		
 		<%
 			String redirectURL = "/indexJSP";
 			response.sendRedirect(redirectURL);
 		%>
-	
-	
 	</body>
 </html>

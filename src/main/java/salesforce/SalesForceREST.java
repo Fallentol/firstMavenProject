@@ -105,7 +105,7 @@ public class SalesForceREST {
         String body = request.getParameter("body");
 
         HttpClient httpclient = new HttpClient();
-        GetMethod post = new GetMethod("http://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
+        GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
         post.addRequestHeader("Authorization", "Bearer " + access_token);
         post.addRequestHeader("Content-Type", "application/json"); // ('Content-Type', 'application/json');
         try {

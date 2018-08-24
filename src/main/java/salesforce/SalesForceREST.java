@@ -46,7 +46,7 @@ public class SalesForceREST {
 
 
     public String getAuthorizationCode(HttpServletRequest request) {
-        String access_token = "NA";
+        String access_token;
         HttpClient httpclient = new HttpClient();
 
         PostMethod post = new PostMethod(PARAMETERS_MAP.get("uri"));
@@ -56,7 +56,7 @@ public class SalesForceREST {
         post.addParameter("username", PARAMETERS_MAP.get("username"));
         post.addParameter("password", PARAMETERS_MAP.get("password"));
 
-        String responseBody = null;
+        String responseBody;
         try {
             httpclient.executeMethod(post);
             responseBody = post.getResponseBodyAsString();
@@ -64,7 +64,6 @@ public class SalesForceREST {
             System.out.println("IOException=" + ioe);
             return "ERROR";
         }
-
 
         try {
             JSONObject json = new JSONObject(responseBody);
@@ -94,6 +93,27 @@ public class SalesForceREST {
         post.addRequestHeader("Authorization", "Bearer " + access_token);
         post.addRequestHeader("X-PrettyPrint", "1");
         httpclient.executeMethod(post);
+
+        return post.getResponseBodyAsString();
+    }
+
+    public String getAnonymousRequest(HttpServletRequest request) throws IOException {
+
+        HttpSession session = request.getSession();
+        String access_token = (String) session.getAttribute("access_token");
+
+        String body = request.getParameter("body");
+
+        HttpClient httpclient = new HttpClient();
+        GetMethod post = new GetMethod("http://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
+        post.addRequestHeader("Authorization", "Bearer " + access_token);
+        post.addRequestHeader("Content-Type", "application/json"); // ('Content-Type', 'application/json');
+        try {
+            httpclient.executeMethod(post);
+        } catch (Exception e) {
+            System.out.println("Exception:" + e);
+            return e.getMessage();
+        }
 
         return post.getResponseBodyAsString();
     }

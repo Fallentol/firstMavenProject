@@ -17,4 +17,8 @@ public class cb3__Line__c extends SObject {
     public double cb3__Q11__c;
     public double cb3__Q12__c;
     public double cb3__Q13__c;
+
+    public SObject createNewSObject(String s) {
+        return null;
+    }
 }

@@ -105,7 +105,9 @@ public class SalesForceREST {
         String body = request.getParameter("body");
 
         HttpClient httpclient = new HttpClient();
-        GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
+        //GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
+        //GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v29.0/tooling/executeAnonymous/?anonymousBody=AnonymousApex.executeAfterDeployAnonymousApex()%3B");
+        GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v29.0/tooling/executeAnonymous/?anonymousBody=System.debug('Test')%3B");
         post.addRequestHeader("Authorization", "Bearer " + access_token);
         post.addRequestHeader("Content-Type", "application/json"); // ('Content-Type', 'application/json');
         try {

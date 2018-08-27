@@ -1,5 +1,6 @@
 package servlets;
 
+import ru.strava.App;
 import salesforce.SalesForceREST;
 
 import javax.servlet.ServletException;
@@ -24,6 +25,7 @@ public class IndexServlet extends HttpServlet {
             result = salesforceREST.getAuthorizationCode(request);
         } else if (action.equals("queryRequest")) {
             result = salesforceREST.getQueryRequest(request);
+            App.test1(result);
         } else {
             result = salesforceREST.getAnonymousRequest(request);
         }

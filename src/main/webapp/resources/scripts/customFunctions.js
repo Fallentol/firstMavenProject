@@ -28,7 +28,7 @@ function sendQueryRequest() {
             var table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
             var headTR = $("<tr></tr>");
             keys.forEach(function (key) {
-                var t = $("<td>"+key+"</td>").addClass("tableHeader");
+                var t = $("<td>" + key + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);
@@ -69,7 +69,7 @@ function sendAnonymousRequest() {
             var table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
             var headTR = $("<tr></tr>");
             keys.forEach(function (key) {
-                var t = $("<td>"+key+"</td>").addClass("tableHeader");
+                var t = $("<td>" + key + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);
@@ -85,6 +85,16 @@ function sendAnonymousRequest() {
 
             $("#tablePlace").append(table);
 
+        }
+    );
+}
+
+function runTest() {
+    console.log("Run test");
+    $.post("/indexJSP", {
+            action: "runTest"
+        }, function (resp) {
+            console.log("resp=" + resp);
         }
     );
 }

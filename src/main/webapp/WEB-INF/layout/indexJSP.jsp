@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <jsp:useBean id="date" class="java.util.Date" />
+    <jsp:useBean id="test" class="auxiliary.BeanSimple" />
 <html>
 
 
@@ -17,6 +19,8 @@
     <body style="background-image: url(../../resources/images/clouds.jpg); background-size: cover;">
         <div class="w3-container w3-blue-grey w3-opacity w3-left-align">
             <h1>CLOUD BUDGET NAVIGATION</h1>
+            <c:out value="${date}"/>
+            <c:out value="${test.name}"/>
         </div>
         <div class="centralDiv">
 

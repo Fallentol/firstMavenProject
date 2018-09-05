@@ -14,15 +14,6 @@
         <url-pattern>/indexJSP</url-pattern>
     </servlet-mapping>
 
-    <!--<servlet>
-        <servlet-name>ForwardServlet</servlet-name>
-        <servlet-class>servlets.ForwardServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ForwardServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>-->
-
     <servlet>
         <servlet-name>ReportServlet</servlet-name>
         <servlet-class>servlets.ReportServlet</servlet-class>
@@ -31,6 +22,20 @@
         <servlet-name>ReportServlet</servlet-name>
         <url-pattern>/reportservlet</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ErrorServlet</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>servlets.ErrorServlet</servlet-class>
+    </servlet>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error</location>
+    </error-page>
 
 
 </web-app>

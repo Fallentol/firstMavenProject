@@ -59,9 +59,11 @@
                     </header>
                 </div>
                 <div class="slds-card__body slds-card__body_inner" style="padding-left: 15px;">
-                    <input type="text" id="userName" class="slds-input"/>
-                    <input type="text" id="userPassword" class="slds-input"/>
-                    <input type="text" id="userST" class="slds-input"/>
+                <div style="width: 500px;">
+                    <input type="text" id="userName" class="slds-input" label="User Name"/>
+                    <input type="text" id="userPassword" class="slds-input"  label="User Password"/>
+                    <input type="text" id="userST" class="slds-input"  label="User ST"/>
+                </div>
 
                     Query<br/>
                     (SELECT Id, Name, cb3__Q1__c FROM cb3__Line__c WHERE cb3__Entry__c != null)<br/>

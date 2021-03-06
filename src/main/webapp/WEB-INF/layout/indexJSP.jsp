@@ -61,15 +61,15 @@
                 <div class="slds-card__body slds-card__body_inner" style="padding-left: 15px;">
                 <div style="width: 500px;">
                     <div class="slds-form-element">
-                        <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                        <label class="slds-form-element__label" >Username</label>
                         <div class="slds-form-element__control">
                             <input type="text" id="userName" class="slds-input" />
                         </div>
-                            <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                            <label class="slds-form-element__label" >Password</label>
                             <div class="slds-form-element__control">
                                 <input type="text" id="userPassword" class="slds-input"  />
                             </div>
-                        <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                        <label class="slds-form-element__label" >ST</label>
                         <div class="slds-form-element__control">
                             <input type="text" id="userST" class="slds-input" />
                         </div>

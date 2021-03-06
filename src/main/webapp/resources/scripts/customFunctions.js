@@ -43,9 +43,9 @@ function sendQueryRequest() {
 
             let table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
             let headTR = $("<tr></tr>");
-            headTR.append("<td>#</td>");
+            headTR.append("<td>#</td>").addClass("tableHeader");
             keys.forEach(function (key) {
-                let t = $("<td>" + key + "</td>").addClass("tableHeader");
+                let t = $("<td>" + (key + 1) + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);

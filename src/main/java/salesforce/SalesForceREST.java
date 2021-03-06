@@ -81,6 +81,42 @@ public class SalesForceREST {
         return access_token;
     }
 
+    public String getAuthorizationCodeWithPassword(HttpServletRequest request, String userName, String userPassword, String userST) {
+        String access_token;
+        HttpClient httpclient = new HttpClient();
+
+        PostMethod post = new PostMethod(PARAMETERS_MAP.get("uri"));
+        post.addParameter("grant_type", PARAMETERS_MAP.get("grant_type"));
+        post.addParameter("client_id", PARAMETERS_MAP.get("client_id"));
+        post.addParameter("client_secret", PARAMETERS_MAP.get("client_secret"));
+        post.addParameter("username", userName);
+        post.addParameter("password", userPassword + userST);
+
+        String responseBody;
+        try {
+            httpclient.executeMethod(post);
+            responseBody = post.getResponseBodyAsString();
+        } catch (IOException ioe) {
+            System.out.println("IOException=" + ioe);
+            return "ERROR";
+        }
+
+        try {
+            JSONObject json = new JSONObject(responseBody);
+            access_token = json.getString("access_token");
+        } catch (Exception e) {
+            e.printStackTrace();
+            access_token = " Exception = " + e;
+        }
+
+        // Save access_token in the session
+        HttpSession session = request.getSession();
+        session.setAttribute("access_token", access_token);
+        System.out.println("access_token=" + access_token);
+
+        return access_token;
+    }
+
     public String getQueryRequest(HttpServletRequest request) throws IOException {
 
         HttpSession session = request.getSession();
@@ -105,8 +141,6 @@ public class SalesForceREST {
         String body = request.getParameter("body");
 
         HttpClient httpclient = new HttpClient();
-        //GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v43.0/tooling/sobjects/");
-        //GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v29.0/tooling/executeAnonymous/?anonymousBody=AnonymousApex.executeAfterDeployAnonymousApex()%3B");
         GetMethod post = new GetMethod("https://na48.salesforce.com/services/data/v29.0/tooling/executeAnonymous/?anonymousBody=System.debug('Test')%3B");
         post.addRequestHeader("Authorization", "Bearer " + access_token);
         post.addRequestHeader("Content-Type", "application/json"); // ('Content-Type', 'application/json');

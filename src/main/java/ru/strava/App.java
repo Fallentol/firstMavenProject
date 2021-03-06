@@ -11,8 +11,6 @@ import java.util.HashMap;
 public class App {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello world!!");
-
-
     }
 
     public static String test1(String serverJSON) {

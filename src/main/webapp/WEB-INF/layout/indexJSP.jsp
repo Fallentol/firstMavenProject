@@ -6,7 +6,7 @@
 
 
     <head>
-        <title>CLOUD BUDGET</title>
+        <title>CloudBudget2.0</title>
         <link href="../../resources/styles/mainPageStyle.css" rel="stylesheet" type="text/css">
         <link href="../../resources/styles/salesforce-lightning-design-system.css" rel="stylesheet" type="text/css">
         <link href="../../resources/styles/w3.css" rel="stylesheet" type="text/css">
@@ -38,9 +38,8 @@
                             </div>
                             <div style="display: inline-block">
                                 <h2 class="slds-card__header-title">
-                                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate"
-                                       title="Accounts">
-                                        <span class="slds-text-heading_small">Reports</span>
+                                    <a class="slds-card__header-link slds-truncate">
+                                        <span class="slds-text-heading_small">Welcome Page</span>
                                     </a>
                                 </h2>
                             </div>
@@ -48,6 +47,8 @@
                         <div class="slds-no-flex">
                             <input type="button" onclick="sendLogInRequest();"
                                    class="slds-button slds-button--neutral" value="Login 82th"/>
+                            <input type="button" onclick="sendUserLogInRequest();"
+                                   class="slds-button slds-button--neutral" value="Login to a custom org"/>
                             <input type="button" onclick="runTest();"
                                    class="slds-button slds-button--neutral" value="RunTest"/>
                             <input type="button" onclick="deleteOldTable(); sendQueryRequest(); "
@@ -58,11 +59,19 @@
                     </header>
                 </div>
                 <div class="slds-card__body slds-card__body_inner" style="padding-left: 15px;">
+                    <input type="text" id="userName" class="slds-input"/>
+                    <input type="text" id="userPassword" class="slds-input"/>
+                    <input type="text" id="userST" class="slds-input"/>
+
                     Query<br/>
                     (SELECT Id, Name, cb3__Q1__c FROM cb3__Line__c WHERE cb3__Entry__c != null)<br/>
                     (SELECT Name, Id,cb3__Entry__r.Id, cb3__Entry__r.Name, cb3__Q1__c, cb3__Q2__c, cb3__Q3__c  FROM cb3__Line__c LIMIT 2000)<br/>
                     <input type="text" id="req" class="slds-input"/>
-                    Answer<input type="text" id="answer" class="slds-input"/>
+
+                    Answer
+
+                    <input type="text" id="answer" class="slds-input"/>
+
                     <div id="tablePlace"></div>
                     <a class="txtlink" href="/reportservlet">Report page</a>
                 </div>

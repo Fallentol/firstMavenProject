@@ -8,6 +8,22 @@ function sendLogInRequest() {
     );
 }
 
+function sendUserLogInRequest() {
+    console.log("Send Log in Request");
+    let userName = $("#userName").val();
+    let userPassword = $("#userPassword").val();
+    let userST = $("#userST").val();
+    $.post("/indexJSP", {
+            action: "logInWithPassword",
+            userName: userName,
+            userPassword: userPassword,
+            userST: userST,
+        }, function (resp) {
+            console.log('Resp:' + resp);
+        }
+    );
+}
+
 function sendQueryRequest() {
     let req = $("#req").val();
     req = req.replace(/  /g, '+');

@@ -21,8 +21,14 @@ public class IndexServlet extends HttpServlet {
 
         String result;
         String action = request.getParameter("action");
+        String userName = request.getParameter("userName");
+        String userPassword = request.getParameter("userPassword");
+        String userST = request.getParameter("userST");
+
         if (action.equals("logIn")) {
             result = salesforceREST.getAuthorizationCode(request);
+        } else if (action.equals("logInWithPassword")) {
+            result = salesforceREST.getAuthorizationCodeWithPassword(request, userName, userPassword, userST);
         } else if (action.equals("queryRequest")) {
             result = salesforceREST.getQueryRequest(request);
             App.test1(result);
@@ -32,7 +38,6 @@ public class IndexServlet extends HttpServlet {
         PrintWriter pwList = response.getWriter();
         pwList.write(result);
         request.setAttribute("some", "anyParam");
-
     }
 
     @Override

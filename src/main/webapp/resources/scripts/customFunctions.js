@@ -1,5 +1,5 @@
 function sendLogInRequest() {
-    console.log("Send Log in Request. Deployment test");
+    console.log("Send Log in Request. Deployment test !! ");
     $.post("/indexJSP", {
             action: "logIn"
         }, function (resp) {
@@ -9,7 +9,7 @@ function sendLogInRequest() {
 }
 
 function sendQueryRequest() {
-    var req = $("#req").val();
+    let req = $("#req").val();
     req = req.replace(/  /g, '+');
     req = req.replace(/ /g, '+');
     console.info("Send Query Request: " + req);
@@ -19,23 +19,23 @@ function sendQueryRequest() {
             action: "queryRequest"
         }, function (resp) {
             $("#answer").val(resp);
-            var obj = JSON.parse(resp);
-            var records = obj.records;
-            var keys = Object.keys(records[0]);
+            let obj = JSON.parse(resp);
+            let records = obj.records;
+            let keys = Object.keys(records[0]);
             keys.shift();
             console.log("keys=" + keys);
 
-            var table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
-            var headTR = $("<tr></tr>");
+            let table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
+            let headTR = $("<tr></tr>");
             keys.forEach(function (key) {
-                var t = $("<td>" + key + "</td>").addClass("tableHeader");
+                let t = $("<td>" + key + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);
 
             records.forEach(function (item) {
 
-                var tr = $("<tr></tr>");
+                let tr = $("<tr></tr>");
                 keys.forEach(function (key) {
                     tr.append("<td>" + item[key] + "</td>");
                 });
@@ -50,7 +50,7 @@ function sendQueryRequest() {
 }
 
 function sendAnonymousRequest() {
-    var req = $("#req").val();
+    let req = $("#req").val();
     req = req.replace(/  /g, '+');
     req = req.replace(/ /g, '+');
     console.info("Send Query Request: " + req);
@@ -60,22 +60,22 @@ function sendAnonymousRequest() {
             action: "queryAnonymous"
         }, function (resp) {
             $("#answer").val(resp);
-            var obj = JSON.parse(resp);
-            var records = obj.records;
-            var keys = Object.keys(records[0]);
+            let obj = JSON.parse(resp);
+            let records = obj.records;
+            let keys = Object.keys(records[0]);
             keys.shift();
             console.log("keys=" + keys);
 
-            var table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
-            var headTR = $("<tr></tr>");
+            let table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
+            let headTR = $("<tr></tr>");
             keys.forEach(function (key) {
-                var t = $("<td>" + key + "</td>").addClass("tableHeader");
+                let t = $("<td>" + key + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);
 
             records.forEach(function (item) {
-                var tr = $("<tr></tr>");
+                let tr = $("<tr></tr>");
                 keys.forEach(function (key) {
                     tr.append("<td>" + item[key] + "</td>");
                 });

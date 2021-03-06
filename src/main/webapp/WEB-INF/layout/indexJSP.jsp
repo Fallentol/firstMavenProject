@@ -39,7 +39,7 @@
                             <div style="display: inline-block">
                                 <h2 class="slds-card__header-title">
                                     <a class="slds-card__header-link slds-truncate">
-                                        <span class="slds-text-heading_small">Welcome Page</span>
+                                        <span class="slds-text-heading_small">Welcome Page 2.1</span>
                                     </a>
                                 </h2>
                             </div>

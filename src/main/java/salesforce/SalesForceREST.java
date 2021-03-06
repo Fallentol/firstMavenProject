@@ -40,7 +40,7 @@ public class SalesForceREST {
         PARAMETERS_MAP.put("environment", "https://na48.salesforce.com/services/oauth2/token");
         PARAMETERS_MAP.put("username", "alugovoi@cloudbudget.com");
         PARAMETERS_MAP.put("grant_type", "password");
-        PARAMETERS_MAP.put("password", "214926341qwerty!J5aJvH5vFYAI6xj97KZSSnPN3");
+        PARAMETERS_MAP.put("password", "kmB5OXSC66qyRi6wvxSaznDeCOHBI05I");
         PARAMETERS_MAP.put("uri", "https://na48.salesforce.com/services/oauth2/token");
     }
 

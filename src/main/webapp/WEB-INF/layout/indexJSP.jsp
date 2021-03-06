@@ -39,7 +39,7 @@
                             <div style="display: inline-block">
                                 <h2 class="slds-card__header-title">
                                     <a class="slds-card__header-link slds-truncate">
-                                        <span class="slds-text-heading_small">Welcome Page 2.1</span>
+                                        <span class="slds-text-heading_small">Welcome Page 2.2</span>
                                     </a>
                                 </h2>
                             </div>
@@ -60,9 +60,21 @@
                 </div>
                 <div class="slds-card__body slds-card__body_inner" style="padding-left: 15px;">
                 <div style="width: 500px;">
-                    <input type="text" id="userName" class="slds-input" label="User Name"/>
-                    <input type="text" id="userPassword" class="slds-input"  label="User Password"/>
-                    <input type="text" id="userST" class="slds-input"  label="User ST"/>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="userName" class="slds-input" />
+                        </div>
+                            <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="userPassword" class="slds-input"  />
+                            </div>
+                        <label class="slds-form-element__label" for="text-input-id-1">Input Label</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="userST" class="slds-input" />
+                        </div>
+                    </div>
+
                 </div>
 
                     Query<br/>

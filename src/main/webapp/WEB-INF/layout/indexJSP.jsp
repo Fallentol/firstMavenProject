@@ -84,7 +84,7 @@
 
                     Answer
 
-                    <input type="text" id="answer" class="slds-input"/>
+                    <input type="text" id="answer" class="slds-input" style="font-size: smaller;" />
 
                     <div id="tablePlace"></div>
                     <a class="txtlink" href="/reportservlet">Report page</a>

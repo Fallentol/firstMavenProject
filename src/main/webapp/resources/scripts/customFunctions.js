@@ -37,6 +37,7 @@ function sendQueryRequest() {
             $("#answer").val(resp);
             let obj = JSON.parse(resp);
             let records = obj.records;
+            alert('The number of the records is ' + obj.records.length);
             let keys = Object.keys(records[0]);
             keys.shift();
             console.log("keys=" + keys);

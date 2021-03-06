@@ -1,5 +1,5 @@
 function sendLogInRequest() {
-    console.log("Send Log in Request");
+    console.log("Send Log in Request. Deployment test");
     $.post("/indexJSP", {
             action: "logIn"
         }, function (resp) {

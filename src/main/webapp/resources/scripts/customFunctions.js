@@ -37,22 +37,23 @@ function sendQueryRequest() {
             $("#answer").val(resp);
             let obj = JSON.parse(resp);
             let records = obj.records;
-            alert('The number of the records is ' + obj.records.length);
             let keys = Object.keys(records[0]);
             keys.shift();
             console.log("keys=" + keys);
 
             let table = $("<table></table>").addClass("slds-table slds-table_bordered slds-table_cell-buffer");
             let headTR = $("<tr></tr>");
+            headTR.append("<td>#</td>");
             keys.forEach(function (key) {
                 let t = $("<td>" + key + "</td>").addClass("tableHeader");
                 headTR.append(t);
             });
             table.append(headTR);
 
-            records.forEach(function (item) {
+            records.forEach(function (item, index) {
 
                 let tr = $("<tr></tr>");
+                tr.append("<td>" + index + "</td>");
                 keys.forEach(function (key) {
                     tr.append("<td>" + item[key] + "</td>");
                 });
@@ -61,7 +62,6 @@ function sendQueryRequest() {
             });
 
             $("#tablePlace").append(table);
-
         }
     );
 }
